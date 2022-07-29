@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.15;
+
+contract _mapping{
+
+  mapping(uint=>bio_data) public info;
+  
+ struct bio_data{
+ string name;
+ uint256 birth_year;
+ string religion;
+ string qualification;
+ string field_of_study;
+}
+
+bio_data  bio_data1 = bio_data("Muhammad Ahsan Hafeez", 2000, "Islam", "Undergraduate", "BS Mathematics");
+
+  function get() public view returns(string memory, uint256, string memory, string memory, string memory){
+
+  return(bio_data1.name, bio_data1.birth_year, bio_data1.religion, bio_data1.qualification, bio_data1.field_of_study);
+ }
+  function set(string memory _name, uint256 _birth_year, string memory _religion, string memory _qualification, string memory _field_of_study) public{
+  info[_birth_year] = bio_data(_name, _birth_year, _religion, _qualification, _field_of_study);
+
+  }
+
+}
