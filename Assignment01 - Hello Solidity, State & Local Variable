@@ -1,0 +1,23 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.15;
+
+// 08/21/22 - TASK #01 (TO PRINT HELLO SOLIDITY)
+contract hellosolidity{
+                string public str = "Hello Solidity";
+}
+
+// 08/21/22 - TASK #02 (TO RETURN STATE VARIABLE)
+contract statevariable{
+                 uint8 num = 10;
+                 function returnStateVariable() public view returns(uint8){
+                 return num;    
+                 }
+}
+
+// 08/21/22 - TASK #02 (TO RETURN LOCAL VARIABLE)
+contract localvariable{
+                 function returnLocalVariable() public pure returns(uint8){
+                 uint8 _num = 20;
+                 return _num;
+                 }
+}
